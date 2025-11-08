@@ -1,6 +1,8 @@
 # Varnotdefteri
 Sürekli plan yapan birisiyim ama sürekli unutuyorum ve düzenlemek için kendime veri toplamayan bir not defteri yapmak istedim belki işinize yarar
 
+
+![görünüm](goruntu.png)
 Özellikler
 --
 -Not ekleme ve not silme
