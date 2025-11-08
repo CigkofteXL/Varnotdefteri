@@ -34,6 +34,9 @@
             notyaz = new TextBox();
             notlar = new ListBox();
             alldelete = new Button();
+            degistir = new Button();
+            saveFileDialog1 = new SaveFileDialog();
+            openFileDialog1 = new OpenFileDialog();
             SuspendLayout();
             // 
             // notekle
@@ -79,12 +82,13 @@
             notlar.ForeColor = SystemColors.Window;
             notlar.FormattingEnabled = true;
             notlar.ItemHeight = 15;
-            notlar.Items.AddRange(new object[] { "notların burada gözükür bu notu silip başlığı kendin atmak istersen yeni bir not ekleyip 0 sil yaparak başlık ayarlayabilirsin" });
+            notlar.Items.AddRange(new object[] { "NOTLAR" });
             notlar.Location = new Point(152, 257);
             notlar.Name = "notlar";
             notlar.Size = new Size(944, 499);
             notlar.TabIndex = 5;
             notlar.SelectedIndexChanged += notlar_SelectedIndexChanged;
+            notlar.DoubleClick += notlar_DoubleClick;
             // 
             // alldelete
             // 
@@ -99,12 +103,30 @@
             alldelete.UseVisualStyleBackColor = false;
             alldelete.Click += alldelete_Click;
             // 
+            // degistir
+            // 
+            degistir.Anchor = AnchorStyles.Top;
+            degistir.BackColor = Color.Transparent;
+            degistir.ForeColor = Color.Black;
+            degistir.Location = new Point(336, 158);
+            degistir.Name = "degistir";
+            degistir.Size = new Size(83, 24);
+            degistir.TabIndex = 7;
+            degistir.Text = "değiştir";
+            degistir.UseVisualStyleBackColor = false;
+            degistir.Click += degistir_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1229, 798);
+            Controls.Add(degistir);
             Controls.Add(notyaz);
             Controls.Add(notekle);
             Controls.Add(notsil);
@@ -116,7 +138,6 @@
             Text = "Varnotdefteri";
             FormClosing += Form1_FormClosing;
             Load += Form1_Load;
-            Enter += Form1_Enter;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,5 +148,8 @@
         private TextBox notyaz;
         private ListBox notlar;
         private Button alldelete;
+        private Button degistir;
+        private SaveFileDialog saveFileDialog1;
+        private OpenFileDialog openFileDialog1;
     }
 }
