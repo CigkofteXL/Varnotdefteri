@@ -53,7 +53,25 @@ namespace Varbotdefteri
         {
             hepsinisil();
         }
+        private void degistir_Click(object sender, EventArgs e)
+        {
+            notdegistir();
+        }
 
+        private void notlar_DoubleClick(object sender, EventArgs e)
+        {
+            DialogResult secim = MessageBox.Show("Notlarý txt olarak kaydetmek için Evet'e, notlarý yüklemek için Hayýr'a basýn", "Seçim", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (secim == DialogResult.Yes)
+            {
+                dosyakaydet();
+            }
+            else if (secim == DialogResult.No)
+            {
+                Dosyadanyukle();
+            }
+            else
+            { }
+        }
         void listkaydet()
         {
             string kaydedilecekMetin = string.Join("|", nots);
@@ -129,9 +147,7 @@ namespace Varbotdefteri
             else
             { }
         }
-
-
-        private void dosyakaydet()
+        void dosyakaydet()
         {
             // 1. SaveFileDialog ayarlarýný yap
             saveFileDialog1.Filter = "Metin Dosyasý (*.txt)|*.txt|Tüm Dosyalar (*.*)|*.*";
@@ -166,8 +182,7 @@ namespace Varbotdefteri
                 }
             }
         }
-
-        private void Dosyadanyukle()
+        void Dosyadanyukle()
         {
             // 1. OpenFileDialog ayarlarýný yap
             openFileDialog1.Filter = "Metin Dosyasý (*.txt)|*.txt";
@@ -200,24 +215,6 @@ namespace Varbotdefteri
                 }
             }
         }
-        private void degistir_Click(object sender, EventArgs e)
-        {
-            notdegistir();
-        }
-
-        private void notlar_DoubleClick(object sender, EventArgs e)
-        {
-            DialogResult secim = MessageBox.Show("Notlarý txt olarak kaydetmek için Evet'e, notlarý yüklemek için Hayýr'a basýn", "Seçim", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (secim == DialogResult.Yes)
-            {
-                dosyakaydet();
-            }
-            else if (secim == DialogResult.No)
-            {
-                Dosyadanyukle();
-            }
-            else
-            { }
-        }
+     
     }
 }
