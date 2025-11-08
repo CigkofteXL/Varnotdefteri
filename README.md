@@ -5,7 +5,13 @@ Sürekli plan yapan birisiyim ama sürekli unutuyorum ve düzenlemek için kendi
 ![görünüm](goruntu.png)
 Özellikler
 --
--Not ekleme ve not silme
+-Not ekleme 
+-not silme (seçerek veya indexi yazarak)
+-toplu not silme
+-dosya yükleme
+-dosya kaydetme
+-hafıza 
+-kaydedilmiş notları düzenleme
 
 Kurulum
 --
